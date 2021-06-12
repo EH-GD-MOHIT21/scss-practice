@@ -1,0 +1,21 @@
+// Default value in mixin for height and Display
+@mixin centerMyDiv($height:40px, $Display:flex) {
+    @if($Display==flex) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: $height;
+    }
+    @else if($Display==block) {
+        display: block;
+        width: 100vw;
+        margin: $height auto;
+        text-align: center;
+    }
+    @else {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

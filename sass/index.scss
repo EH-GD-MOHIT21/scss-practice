@@ -1,0 +1,28 @@
+// some color variables
+$primaryColor:#ff2ce5;
+$secondaryColor:#ec5ef9;
+$thirdVarient:#aabbcc;
+$success:green;
+$selectColor:gold;
+// func or mixin for center a div belongs to centerDiv.scss file
+// importing centerDiv.scss File
+@import "centerDiv";
+.title {
+    h1 {
+        color: $success;
+        background: $secondaryColor;
+        // Calling mixin centerMyDiv
+        @include centerMyDiv($height: 20px, $Display: flex);
+    }
+    h3 {
+        color: $secondaryColor;
+        text-align: justify;
+        font-family: sans-serif;
+        padding: 20px;
+        line-height: 50px;
+        &::selection {
+            background: $thirdVarient;
+            color: $selectColor;
+        }
+    }
+}
