@@ -1,0 +1,22 @@
+@for $div from 2 through 11 {
+    .main:nth-child(#{$div}) {
+        h1 {
+            text-align: center;
+        }
+        @if($div%2==0) {
+            h1 {
+                color: red;
+            }
+        }
+        @else if($div%3==0) {
+            h1 {
+                color: green;
+            }
+        }
+        @else {
+            h1 {
+                color: cyan;
+            }
+        }
+    }
+}
